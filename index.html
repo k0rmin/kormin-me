@@ -2,82 +2,97 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Путь судьбы | Очнись</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url('kormin_landing_background.jpg');
-            background-size: cover;
-            background-position: center;
-            font-family: 'Inter', sans-serif;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 100vh;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ПУТЬ СУДЬБЫ</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: url("kormin_landing_background.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.65);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      border-radius: 10px;
+      margin: 12vh auto;
+      max-width: 600px;
+    }
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 42px;
+      margin-bottom: 25px;
+    }
+    .line {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+    .icons {
+      margin: 30px 0 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .icons a {
+      width: 36px;
+      height: 36px;
+      display: inline-block;
+    }
+    .icons img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+    .icons img:hover {
+      transform: scale(1.15);
+    }
+    .footer {
+      font-size: 14px;
+      margin-top: 15px;
+      color: #ccc;
+    }
+  </style>
+  <script>
+    function openApp(appUrl, fallbackUrl) {
+      const now = Date.now();
+      window.location = appUrl;
+      setTimeout(function () {
+        if (Date.now() - now < 1500) {
+          window.location = fallbackUrl;
         }
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 40px;
-            border-radius: 8px;
-        }
-        h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-        h2 {
-            font-size: 22px;
-            font-weight: 400;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        .icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-        .icons a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-        }
-        .icons img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            transition: 0.3s;
-        }
-        .icons img:hover {
-            transform: scale(1.1);
-        }
-        .footer {
-            font-size: 14px;
-            color: #ccc;
-        }
-    </style>
+      }, 1000);
+    }
+  </script>
 </head>
 <body>
-    <div class="overlay">
-        <h1>ПУТЬ СУДЬБЫ</h1>
-        <h2>
-            Очнись.<br>
-            Честный путь восстановления.<br>
-            RPG-система.<br>
-            Только действия.
-        </h2>
-        <div class="icons">
-            <a href="https://www.youtube.com/@put_sudby" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
-            <a href="https://t.me/put_sudby" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram"></a>
-            <a href="https://www.tiktok.com/@yehor.kormin" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok"></a>
-            <a href="https://www.instagram.com/yehor.kormin" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram"></a>
-        </div>
-        <div class="footer">Сайт в разработке. Это только начало.</div>
+  <div class="overlay">
+    <h1>ПУТЬ СУДЬБЫ</h1>
+    <div class="line">Очнись</div>
+    <div class="line">Честный путь восстановления</div>
+    <div class="line">RPG-система</div>
+    <div class="line">Только действия</div>
+
+    <div class="icons">
+      <a href="#" onclick="openApp('youtube://www.youtube.com/@put_sudby', 'https://www.youtube.com/@put_sudby')">
+        <img src="icons/youtube.svg" alt="YouTube">
+      </a>
+      <a href="#" onclick="openApp('tg://resolve?domain=put_sudby', 'https://t.me/put_sudby')">
+        <img src="icons/telegram.svg" alt="Telegram">
+      </a>
+      <a href="#" onclick="openApp('tiktok://user/@yehor.kormin', 'https://www.tiktok.com/@yehor.kormin')">
+        <img src="icons/tiktok.svg" alt="TikTok">
+      </a>
+      <a href="#" onclick="openApp('instagram://user?username=yehor.kormin', 'https://www.instagram.com/yehor.kormin')">
+        <img src="icons/instagram.svg" alt="Instagram">
+      </a>
     </div>
+
+    <div class="footer">Сайт в разработке Это только начало</div>
+  </div>
 </body>
 </html>
