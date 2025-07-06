@@ -43,7 +43,7 @@
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.12); /* Светлый фон под иконкой */
+      background-color: rgba(255, 255, 255, 0.12);
       transition: background-color 0.3s ease, transform 0.3s ease;
     }
     .icons a:hover {
@@ -54,12 +54,35 @@
       width: 24px;
       height: 24px;
       object-fit: contain;
-      filter: invert(1); /* Делает иконки белыми на тёмном фоне */
+      filter: invert(1);
     }
     .footer {
       font-size: 14px;
       margin-top: 15px;
       color: #ccc;
+    }
+    .contact-form {
+      margin-top: 30px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 80%;
+      max-width: 400px;
+      padding: 10px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ffffff33;
+      color: white;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background-color: #ffffff55;
     }
   </style>
   <script>
@@ -96,6 +119,14 @@
         <img src="icons/instagram.svg" alt="Instagram">
       </a>
     </div>
+
+    <form class="contact-form" action="mailto:yehor@kormin.me" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Ваше имя">
+      <input type="email" name="email" placeholder="Ваш Email" required>
+      <textarea name="message" rows="4" placeholder="Ваше сообщение" required></textarea>
+      <br>
+      <button type="submit">Отправить</button>
+    </form>
 
     <div class="footer">Сайт в разработке Это только начало</div>
   </div>
